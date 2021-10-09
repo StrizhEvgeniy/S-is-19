@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .container {
     width: 100%;
-    min-width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -133,11 +133,13 @@ h1, h2, h3, h4, h5, h6 {
     transition: opacity .1s linear;
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.nav__link.active {
     color: #fce38a;
 }
 
-.nav__link:hover:after {
+.nav__link:hover:after,
+.nav__link.active::after {
     opacity: 1;
 }
 
@@ -162,4 +164,130 @@ h1, h2, h3, h4, h5, h6 {
 .btn:hover {
     background-color: #fff;
     color: #333;
+}
+
+
+/* Slider */
+.slider {
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.slider__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider__item {
+    width: 24%;
+    padding: 20px 0;
+    position: relative;
+
+    border-top: 3px solid #fff;
+    opacity: .7;
+
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.slider__item.active {
+    opacity: 1;
+}
+
+.slider__num {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.slider__item.active::before {
+    content:"";
+    display: block;
+    width: 70px;
+    height: 3px;
+
+    background-color: #f38181;
+
+    position: absolute;
+    top: -3px;
+    left: 0;
+    z-index: 1;
+}
+
+
+/* Section */
+.section {
+    padding: 90px 0;
+}
+
+.section__header {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 40px ;
+
+    text-align: center;
+}
+
+.section__suptitle {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+    color: #333;
+}
+
+.section__title {
+    font-weight: 700;
+    font-size: 30px;
+    color:#333;
+    text-transform: uppercase;
+}
+
+.section__title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 40px auto ;
+
+    background-color: #f38181;
+}
+
+.section__text {
+    font-size: 15px;
+    color: #a8a8a8;
+}
+
+
+/* About */
+.about {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__item {
+    width: 380px;
+
+    background: #95e1d3;
+}
+
+.about__item:hover .about__img{
+    transform: translate3d(-10px,-10px,0);
+}
+
+.about__img {
+    background: linear-gradient(#f38181,#fce38a);
+    
+    transition: transform .2s linear;
+}
+
+.about__img img {
+    display: block;
+    transition: opacity .2s linear;
+}
+
+.about__item:hover .about__img img {
+    opacity: .1;
 }
