@@ -263,6 +263,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* About */
 .about {
+    padding-top: 60px;
+}
+
+.about__inner {
     display: flex;
     justify-content: space-between;
 }
@@ -281,6 +285,7 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(#f38181,#fce38a);
     
     transition: transform .2s linear;
+    position: relative;
 }
 
 .about__img img {
@@ -290,4 +295,101 @@ h1, h2, h3, h4, h5, h6 {
 
 .about__item:hover .about__img img {
     opacity: .1;
+}
+
+.about__text {
+    width: 100%;
+
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    transition: opacity .2s linear;
+}
+
+.about__item:hover .about__text {
+    opacity: 1;
+}
+
+
+/* Stats */
+.statistics {
+    margin-top: 110px;
+
+    background-color: #95e1d3;
+}
+
+.stat__inner {
+    display: flex;
+}
+
+.stat__item {
+    padding: 60px 25px;
+    flex: 1 1 0;
+
+    border-left: 1px solid #fff;
+    
+    color: #fff;
+    text-align: center;
+}
+
+.stat__item:last-child {
+    border-right: 1px solid #fff;
+}
+
+.stat__num {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat__text {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+
+/* Services */
+.services {
+    padding: 20px 0;
+    display: flex;
+}
+
+.service__item {
+    flex: 1 1 0;
+
+    padding: 10px 15px;
+
+    position: relative;
+
+    font-size: 14px;
+}
+
+.service__icon {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+}
+
+.service__text {
+    margin-left: 50px;
+    margin-top: 5px;
+
+    color: #a8a8a8;
+}
+
+.service__title {
+    margin-left: 50px;
+
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #333;
+    
 }
