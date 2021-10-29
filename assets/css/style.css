@@ -379,20 +379,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service__text {
+<<<<<<< HEAD
     margin-left: 70px;
+=======
+    margin-left: 50px;
+>>>>>>> daa700bf6c3308ffd43fd9501dd59d44347c2ba2
     margin-top: 5px;
 
     color: #a8a8a8;
 }
 
 .service__title {
+<<<<<<< HEAD
     margin-left: 70px;
+=======
+    margin-left: 50px;
+>>>>>>> daa700bf6c3308ffd43fd9501dd59d44347c2ba2
 
     text-transform: uppercase;
     font-weight: 700;
     color: #333;
     
 }
+<<<<<<< HEAD
 
 hr {
    opacity: .3; 
